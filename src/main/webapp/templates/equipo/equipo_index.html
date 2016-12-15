@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="page">
+<head>
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>CEP - UNA | Centro de Estudiantes de la Facultad Polictenica UNA</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- CSS & google font
+  ================================================== -->
+    
+    <link rel="stylesheet" type="text/css" th:href="@{/css/base.css}" href="../css/base.css" media="all">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../css/style.css" media="all">
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300|Roboto+Slab:400,300' 
+rel='stylesheet' type='text/css'>
+
+
+	<!-- Favicons
+  ================================================== -->
+	<link rel="shortcut icon" th:href="@{/images/favicon.ico}" href="images/favicon.ico">
+
+    <!-- js
+  ================================================== -->
+
+	<script th:src="@{/js/jquery-1.10.2.min.js}" src="js/jquery-1.10.2.min.js"></script>
+	<script th:src="@{/js/mgmenu_plugins.js}" src="js/mgmenu_plugins.js"></script>
+	<script th:src="@{/js/mgmenu.min.js}" src="js/mgmenu.min.js"></script>
+	<script th:src="@{/js/modernizr.js}" src="js/modernizr.js"></script>
+
+	  
+   <!-- js IE8 Hack
+  ================================================== -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.js"></script>
+    <![endif]-->
+
+
+<link rel="shortcut icon" href="/images/favicon.ico"
+	th:href="@{/images/favicon.ico}" type="image/x-icon" />
+
+<script src="../../js/jquery-2.2.3.min.js"
+	th:src="@{/js/jquery-2.2.3.min.js}"></script>
+<script src="../../js/jquery-ui.js}" th:src="@{/js/jquery-ui.js}"></script>
+<script src="../../js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+<script src="../../js/app.min.js" th:src="@{/js/app.min.js}"></script>
+<script th:src="@{/js/plugins/dataTables/jquery.dataTables.min.js}"></script>
+<link th:href="@{/css/plugins/dataTables.bootstrap.min.css}"
+	rel="stylesheet" />
+	
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"
+	href="../../css/bootstrap.min.css" />
+<link href="../../css/font-awesome.min.css"
+	th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
+<link rel="stylesheet" th:href="@{/css/AdminLTE.min.css}"
+	href="../../css/AdminLTE.min.css" />
+<link th:href="@{/css/plugins/responsive.bootstrap.min.css}"
+	href="../../css/plugins/responsive.bootstrap.min.css" rel="stylesheet" />
+</head>
+
+
+
+<body class="HomePage">
+<div id="wrap" class="">
+  
+<!-- Header starts
+  ================================================== -->
+
+<div class="top-bar">
+<div class="container">  
+
+<div class="top-links col-xs-12 col-sm-6 col-md-6 col-lg-6"><a th:href="@{/logout}" href="login.html">Cerrar sesión</a> </div>
+
+<div class="top-co-inf col-xs-12 col-sm-6 col-md-6 col-lg-6"><h6><i class="icomoon-envelop-2"></i> info@cepuna.com</h6> <h6><i class="icomoon-phone-2"></i>(021) 588 7194</h6></div>
+
+</div>
+</div>
+
+<header id="header">
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 Headerlogo">
+          <a th:href="@{/}" href="index-2.html"> <img src="images/logo.png" class="logo" alt="CEP"/></a>
+        </div>
+            
+        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 headerSocial hidden-xs">            
+		  <div class="socialfollow">
+		  <a href="https://www.facebook.com/cepunapy" class="facebook"><i class="icomoon-facebook Three-Dee"></i></a> 		  
+		  <a href="https://twitter.com/cepunapy" class="twitter"><i class="icomoon-twitter Three-Dee"></i></a> 
+		  <a href="https://www.instagram.com/cepunapy/" class="instagram"><i class="icomoon-instagram Three-Dee"></i></a>
+		  </div>  
+        </div>        
+      </div>
+	</div>
+</header>
+
+
+<!-- Header ends
+  ================================================== -->
+
+  
+<!-- Navigation starts
+  ================================================== -->
+ <div class=""> <div id="mgmenu1" class="mgmenu_container clearfix ">     
+        <ul class="mgmenu clearfix" id="nav1"><!-- Begin Mega Menu -->
+            <li class="mgmenu_button"><div class="mgm_button_text"> <i class="icomoon-grid"></i>Menu  </div> </li>
+			<!-- Button (Mobile Devices) -->
+       <!-- Registros -->
+			<li><span><a  href="#">Registros<i class="icomoon-arrow-down-2"></i></a></span> 
+				<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 dropdown_container">
+					<ul class="dropdown_flyout">						
+						<li><a th:href="@{/alumno}" href="#">Alumnos</a></li>
+						<li><a th:href="@{/equipo}" href="#">Equipos</a></li>
+						<li><a th:href="@{/estado}" href="#">Estados</a></li>
+						<li><a th:href="@{/reserva}" href="#">Planilla de Reservas</a></li>
+                    </ul>
+				</div> 
+            </li>
+			<!-- Fin Registros -->  
+<!-- End -->
+   
+<!--
+   <div role="search" class="hidden-xs hidden-sm" >
+	<div id="search-form">
+          <form method="get" action="#">
+            <input type="text" id="search-box" class="search-text-box">
+          </form>
+        </div>
+     
+    </div>
+-->
+     
+  </ul></div></div>
+
+
+
+<!-- Navigation ends
+  ================================================== -->
+<!-- Fin Header -->
+
+	<!-- Services Section -->
+	<section id="services">
+		<div class="container">
+			<div class="row">
+
+				<div class=" col-lg-4 col-md-4">
+					<h4 class="page-header" th:text="#{equipo.form.titulo}">Detalles
+						de alumnos</h4>
+					<span th:text="${error}" style="color: red"> Ocurrió un
+						error</span> <span th:text="${msgExito}" style="color: green">Registro
+						Guardado</span>
+					<ul>
+						<li th:each=" err : ${errorList}"
+							th:text="#{${err.defaultMessage}}" style="color: red">Debe
+							ingresar cédula</li>
+					</ul>
+					<!-- Inicio del Formulario -->
+					<form th:action="@{/equipo/save}" th:object="${equipo}"
+						method="post" role="form">
+						<input type="hidden" th:field="*{id}" />
+
+						<div class="row">
+							<div class="form-group col-lg-6 col-md-8">
+								<label for="codigo" th:text="#{equipo.codigo.lbl}"
+									class="field-label">Código:</label> <input type="text"
+									th:field="*{codigo}" maxlength="18" class="form-control"
+									autofocus="autofocus" />
+							</div>
+							<div class="form-group col-lg-6 col-md-4">
+								<label for="descripcion" th:text="#{equipo.descripcion.lbl}"
+									class="field-label">Descripción:</label> <input type="text"
+									th:field="*{descripcion}" maxlength="60" class="form-control" />
+							</div>
+						</div>
+
+						<div class="row">
+
+							<div class="form-group col-lg-12">
+								<label for="estado" th:text="#{equipo.estado.lbl}"
+									class="field-label">Estado:</label> 
+									<select
+									th:field="*{estado}" class="form-control">
+									<option th:each=" tip : ${estadoList}" th:value="${tip.id}"
+										th:text="${tip.estado}">Excelente</option>
+								</select>
+
+							</div>
+						</div>
+						<!-- Inicio panel botones -->
+				<div class="row">
+					<p>
+						<button type="button" class="btn btn-default" id="botonNuevo"
+							onclick="nuevoRegistro()">
+							<i class="fa fa-plus-circle"></i> <span
+								th:text="#{form.boton.crear}">Nuevo</span>
+						</button>
+					</p>
+					<button type="submit" class="btn btn-default">
+						<i class="fa fa-save"></i> <span th:text="#{form.boton.guardar}">Guardar</span>
+					</button>
+				</div>
+				</form>
+				</div>
+				<!-- Fin panel botones -->
+
+
+			<!-- fin columna 1: Formulario -->
+			<div class="col-lg-8 col-md-8">
+				<table
+					class="table table-bordered table-hover table-striped display"
+					id="equipoDT">
+					<thead>
+						<tr>
+							<th></th>
+							<th>CODIGO</th>
+							<th>DESCRIPCION</th>
+							<th>ESTADO</th>
+						</tr>
+					</thead>
+
+				</table>
+			</div>
+			</div>
+			<script type="text/javascript">
+			$(document).ready(function() {
+				var config={};
+				config['processing'] = true;
+				config['sAjaxSource'] = "[[@{/equipo/json}]]";
+				config['serverSide'] = true;
+				config['columns']= [{'data':'id'}, {'data':'codigo'}, {'data':'descripcion'},
+				{'data':'estado.estado'}];
+
+				var dataTable = $('#equipoDT').dataTable(config);
+				//Ocultamos la primera columna (id)
+				dataTable.fnSetColumnVis(0, false);
+				$('#equipoDT tbody').on('click', 'tr', function() {
+				//Obtenemos el valor de la columna id
+				var id = dataTable.fnGetData(this, 0);
+				//Si id no es número, no hacemos nada
+				if (isNaN(id)) {
+				return;
+				}
+				window.location.href = "/polapp/equipo/edit/" + id;
+				});
+			});
+		</script>
+		<script type="text/javascript">
+        function limpiarForm() {
+        $("#id").val("");
+        $("#codigo").val("");
+        $("#descripcion").val("");
+        $("#estado").val("");
+        }
+        function nuevoRegistro() {
+        limpiarForm();
+        $("#botonNuevo").hide();
+        $("#cedula").focus();
+        }
+    </script>
+		</div>
+		</div>
+	</section>
+	<!--  Fin Servicios Section -->
+
+<!-- Footer starts
+  ================================================== -->   
+  
+      <footer class="clearfix" id="footer">
+       <hr class="vertical-space2">
+      <div class="container">  
+            
+            <div class="row">
+
+<!-- Newsletter  starts
+  ==================== -->     
+<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 footerNewsletter">
+<article>
+<h3>Newsletter</h3>
+
+<p>Suscribite y mantenete informado</p>
+<form method="POST" action="#" id="newsletterForm" class="form-inline" novalidate="novalidate">
+               <div class="input-group">
+      <input type="text" class="form-control" placeholder="Email">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" >Enviar!</button>
+      </span>
+    </div>
+            </form>
+
+  <hr class="vertical-space2">
+</article>
+</div>
+<!-- Newsletter ends
+  ==================== -->
+
+
+<!-- Tweets  starts
+  ==================== -->     
+<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 footerTweets">
+<article>
+<h3>Recientes Tweets</h3>
+<ul>
+
+<li>Una nueva Primavera Estudiantil ha llegado, una primavera con fuerza que se siente y se contagia <a href="https://t.co/W05XBeF4pa">https://t.co/W05XBeF4pa</a> <a href="#" class="footerTweetDate">21 Set</a></li>
+<li>Mañana martes 20 de setiembre saldremos todos los estudiantes juntos a marchar por un Estatuto<a href="https://t.co/esNgUW9Hph">https://t.co/esNgUW9Hph</a><a href="#" class="footerTweetDate">20 Set</a></li>
+<li>Nos toca turno tarde-noche! Seguimos cubriendo y apoyando!! Hoy a partir de las 17 <a href="https://t.co/NVexr7Xghi">https://t.co/NVexr7Xghi</a><a href="#" class="footerTweetDate">17 Feb</a></li>
+
+
+</ul>
+  <hr class="vertical-space2">
+</article>
+</div>
+<!-- Tweets ends
+  ==================== -->
+
+
+
+
+<!-- Contact info  starts
+  ==================== -->
+<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 footerContactInfo">
+<article>
+<h3>Contactos</h3>
+
+
+
+                  <ul class="list-group">
+                  <li class="list-group-item address"><span class="contactItemIcon"><i class="icomoon-location-5"></i></span>Direccion: Facultad Polictenica - Campus Universitario de la UNA - San Lorenzo</li>
+                  <li class="list-group-item phone"><span class="contactItemIcon"><i class="icomoon-phone-4"></i></span>Tel: (021) 588 7194</li>                 
+                  <li class="list-group-item email"><span class="contactItemIcon"><i class="icomoon-envelop"></i></span>Email: info@cepuna.com</li>
+                  <li class="list-group-item website"><span class="contactItemIcon"><i class="icomoon-earth"></i></span>Web: www.cepuna.com</li>
+                  </ul>
+  <hr class="vertical-space2">
+</article> 
+</div>             
+
+</div>
+
+<!-- Contact info ends
+  ==================== -->
+
+
+
+
+
+      
+     </div>
+
+     <div class="footerBottom">
+<div class="container">
+  <hr class="vertical-space2">
+ 
+ <!-- Copyright  starts
+  ==================== -->
+
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 copyright">
+      <img src="images/logo-bottom.png" class="footerLogo" alt="CEP">
+      <div class="copyText"><div class="copyText">© 2016.</div></div>
+
+
+      </div>
+<!-- Copyright ends
+  ==================== -->
+
+<!-- Footer menu  starts
+  ==================== -->
+
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12  footerMenu hidden-sm hidden-xs">
+     
+     <ul class="">
+      <li class=""><a th:href="@{/}" href="index.html">Inicio</a></li>
+      <li><a th:href="@{/about}" href="about.html">Quiene Somos</a></li>
+	  <li><span><a th:href="@{/donde}" href="donde.html">Dónde Estamos</a></span></li>
+      <li><a th:href="@{/services}" href="services.html">Servicios</a></li>
+      <li><a th:href="@{/contact}" href="contact.html">Contactos</a></li>
+      </ul>
+       </div>
+      
+      <form role="form " class="col-md-6 col-lg-6 col-sm-12 col-xs-12 visible-sm visible-xs "> 
+      <div class="form-inline row BottomSearch">
+      <div class="form-group ">
+      <input type="Name" class="form-control" placeholder="Search">
+      </div>
+      </div>
+      </form>
+ <!-- Footer menu ends
+  ==================== -->
+
+
+</div>
+
+</div>
+      </footer>
+  
+<!-- Footer ends
+  ================================================== -->
+	<!-- tema agency -->
+	<script src="../../js/agency.js" th:src="@{/js/agency.js}"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="page">
+<head>
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>CEP - UNA | Centro de Estudiantes de la Facultad Polictenica UNA</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- CSS & google font
+  ================================================== -->
+    
+    <link rel="stylesheet" type="text/css" th:href="@{/css/base.css}" href="../css/base.css" media="all">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../css/style.css" media="all">
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300|Roboto+Slab:400,300' 
+rel='stylesheet' type='text/css'>
+
+
+	<!-- Favicons
+  ================================================== -->
+	<link rel="shortcut icon" th:href="@{/images/favicon.ico}" href="images/favicon.ico">
+
+    <!-- js
+  ================================================== -->
+
+	<script th:src="@{/js/jquery-1.10.2.min.js}" src="js/jquery-1.10.2.min.js"></script>
+	<script th:src="@{/js/mgmenu_plugins.js}" src="js/mgmenu_plugins.js"></script>
+	<script th:src="@{/js/mgmenu.min.js}" src="js/mgmenu.min.js"></script>
+	<script th:src="@{/js/modernizr.js}" src="js/modernizr.js"></script>
+
+	  
+   <!-- js IE8 Hack
+  ================================================== -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.js"></script>
+    <![endif]-->
+
+
+<link rel="shortcut icon" href="/images/favicon.ico"
+	th:href="@{/images/favicon.ico}" type="image/x-icon" />
+
+<script src="../../js/jquery-2.2.3.min.js"
+	th:src="@{/js/jquery-2.2.3.min.js}"></script>
+<script src="../../js/jquery-ui.js}" th:src="@{/js/jquery-ui.js}"></script>
+<script src="../../js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+<script src="../../js/app.min.js" th:src="@{/js/app.min.js}"></script>
+<script th:src="@{/js/plugins/dataTables/jquery.dataTables.min.js}"></script>
+<link th:href="@{/css/plugins/dataTables.bootstrap.min.css}"
+	rel="stylesheet" />
+	
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"
+	href="../../css/bootstrap.min.css" />
+<link href="../../css/font-awesome.min.css"
+	th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
+<link rel="stylesheet" th:href="@{/css/AdminLTE.min.css}"
+	href="../../css/AdminLTE.min.css" />
+<link th:href="@{/css/plugins/responsive.bootstrap.min.css}"
+	href="../../css/plugins/responsive.bootstrap.min.css" rel="stylesheet" />
+</head>
+
+
+
+<body class="HomePage">
+<div id="wrap" class="">
+  
+<!-- Header starts
+  ================================================== -->
+
+<div class="top-bar">
+<div class="container">  
+
+
+
+
+
+</div>
+</div>
+
+<header id="header">
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 Headerlogo">
+          <a  href="#"> <img src="../../images/logo.png" class="logo" alt="CEP"/></a>
+          <h4 align="center" style="color: white"class="page-header" th:text="#{alumno.form.titulo}">Detalles
+				de alumnos</h4>
+        </div>
+            
+                
+      </div>
+	</div>
+</header>
+
+
+<!-- Header ends
+  ================================================== -->
+
+  
+
+<!-- Fin Header -->
+   
+<!-- Services Section -->
+    <section id="services">
+        <div class="container">
+	<div class="row">
+
+		<div class=" col-lg-4 col-md-4">
+	
+			<form th:object="${alumno}" method="post"
+				role="form">
+				<input type="hidden" th:field="*{id}" />
+				<div class="form-group">
+					<label for="codigo" th:text="#{alumno.cedula.lbl}"
+						class="field-label">Cédula:</label> <input  type="text"
+						th:field="*{cedula}" maxlength="18" class="form-control" disabled/>
+				</div>
+				<div class="form-group">
+					<label for="nombre" th:text="#{alumno.nombre.lbl}"
+						class="field-label">Nombre:</label> <input  type="text"
+						th:field="*{nombre}" maxlength="60" class="form-control" disabled/>
+				</div>
+				<div class="form-group">
+					<label for="apellido" th:text="#{alumno.apellido.lbl}"
+						class="field-label">Apellido:</label> <input type="text"
+						th:field="*{apellido}" maxlength="60" class="form-control" disabled/>
+				</div>
+				<div class="form-group">
+					<label for="correo" th:text="#{alumno.correo.lbl}"
+						class="field-label">Correo:</label> <input type="text"
+						th:field="*{correo}" maxlength="100" class="form-control" disabled/>
+				</div>
+				<div class="form-group">
+					<label for="telefono" th:text="#{alumno.telefono.lbl}"
+						class="field-label">Telefono/Celular:</label> <input type="text"
+						th:field="*{telefono}" maxlength="100" class="form-control"  disabled/>
+				<div class="form-group">
+					<label for="carrera" th:text="#{alumno.carrera.lbl}"
+						class="field-label">Carrera:</label> <input type="text"
+						th:field="*{carrera}" maxlength="100" class="form-control" disabled/>
+				</div>
+				<input name="button" type="button" onclick="window.close();" 
+				value="Cerrar Ventana" /> 
+				
+			</form>
+			<!-- Fin panel botones -->
+		</div>
+	</div>
+        </div>
+    </section>
+<!--  Fin Servicios Section -->
+    
+<!-- Footer starts
+  ================================================== -->   
+  
+      <footer class="clearfix" id="footer">
+       <hr class="vertical-space2">
+      <div class="container">  
+
+     <div class="footerBottom">
+<div class="container">
+  <hr class="vertical-space2">
+ 
+ <!-- Copyright  starts
+  ==================== -->
+
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 copyright">
+      <img src="../../images/logo-bottom.png" class="footerLogo" alt="CEP">
+      <div class="copyText"><div class="copyText">© 2016.</div></div>
+
+
+      </div>
+<!-- Copyright ends
+  ==================== -->
+
+<!-- Footer menu  starts
+  ==================== -->
+ <!-- Footer menu ends
+  ==================== -->
+
+
+</div>
+
+</div>
+      </footer>
+  
+<!-- Footer ends
+  ================================================== --> 
+   <!-- tema agency -->
+    <script src="../../js/agency.js" th:src="@{/js/agency.js}"></script>
+</body>
+</html>
